@@ -6,6 +6,13 @@ import Image from "next/image";
 
 const projects: { title: string; description: string; tech: string[]; link?: string }[] = [
   {
+    title: "RSQ Construction",
+    description:
+      "Modern construction company website with responsive design and animated UI components built for a professional online presence.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Motion"],
+    link: "https://rsqconstruction.co.za",
+  },
+  {
     title: "Findr Emergency Locator",
     description:
       "Full-stack emergency service locator with real-time dashboards, API integrations and interactive map systems.",
@@ -22,13 +29,6 @@ const projects: { title: string; description: string; tech: string[]; link?: str
     description:
       "Responsive HR management system with employee tracking, payroll modules and analytics dashboards.",
     tech: ["Vue.js", "JavaScript", "CSS"],
-  },
-  {
-    title: "RSQ Construction",
-    description:
-      "Modern construction company website with responsive design and animated UI components built for a professional online presence.",
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Motion"],
-    link: "https://rsqconstruction.co.za",
   },
 ];
 
@@ -176,18 +176,27 @@ export default function Home() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="flex flex-wrap gap-5"
+              className="flex flex-wrap gap-4"
             >
               <button
                 onClick={() => scrollTo("projects")}
-                className="rounded-2xl bg-pink-200 px-8 py-4 font-semibold text-black transition hover:scale-105"
+                className="rounded-2xl bg-pink-200 px-7 py-4 font-semibold text-black transition hover:scale-105"
               >
                 View Projects
               </button>
 
+              <a
+                href="/cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-2xl border border-pink-200 px-7 py-4 font-semibold text-center text-pink-200 transition hover:bg-pink-200 hover:text-black hover:scale-105 dark:text-pink-200"
+              >
+                View CV
+              </a>
+
               <button
                 onClick={() => scrollTo("contact")}
-                className="rounded-2xl border border-pink-200/30 px-8 py-4 font-semibold transition hover:bg-pink-200/10"
+                className="rounded-2xl border border-pink-200/30 px-7 py-4 font-semibold transition hover:bg-pink-200/10"
               >
                 Contact Me
               </button>
